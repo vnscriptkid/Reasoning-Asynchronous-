@@ -1,0 +1,47 @@
+MODULE 1 : How to explicitly reason about when code executes
+
+KEY takeaways
+- Single-threaded (bank with one teller)
+- Event Loop (line to use the bathroom)
+- Non-blocking (forgot papers, next person serviced)
+- Avoiding blocking (dont hog the bathroom)
+- Run to completion (satisfy customer before next)
+- Cooperative Concurrency (customers play nice)
+- Little Programs (customers in line)
+- Think explicitly about Asynchronous Seams
+- Timer delay not guaranteed (calendar / todo list)
+- Not always async (quack, waddle but not a duck)
+- Race conditions in order of queue
+
+Concurrency Model
+- JS is single-threaded, 
+which is different from other multithreaded languages like JAVA, C#...
+- It means supermarket have only one cashier 
+- And for a line of people, just only one person can checkout at a time
+- Unlike other multi-threaded, which a supermarket has many cashier
+- And can process many check-out at a time
+
+Event Loop
+- We use a queue to store tasks that need to be executed
+- Event Loop is just a loop that run through the queue to execute tasks sequentially
+
+Non-Blocking 
+- Imagine we have a line (queue) of people waiting for to be served
+- Just only one person can be served at a time
+- Everyone should keep a ID card so they can be served
+- A guy forgot his ID card and leave the line temporarily to take it back
+- We dont 'block' the line when that guy leave temporarily
+- But the next guy can come in so that we dont waste everyone's time
+- Actually, 'non-blocking' happened
+
+Run to completion
+- Another nature of Javascript
+- There are 2 types of actions: blocking and non-blocking
++ blocking action will run to completion, means it'll try to run until finish
+and blocking the flow of program
++ otherwise, when js engine reach non-blocking code, the I/O process can happens
+while flow of program can continues
+
+
+
+
