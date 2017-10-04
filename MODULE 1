@@ -42,6 +42,13 @@ and blocking the flow of program
 + otherwise, when js engine reach non-blocking code, the I/O process can happens
 while flow of program can continues
 
+Sources of Asynchronicity:
+- User interactions
+- Network I/O
+- Disk I/O
+- IPC 
+- Timers
+
 
 
 
